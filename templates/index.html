@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gimnasio Salomon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+ 
+    <!-- Flaticon Font -->
+    <link href="{%static "lib/flaticon/font/flaticon.css" %} rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static "css/style.min.css" %}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="" class="navbar-brand">
+                <h1 class="m-0 display-4 font-weight-bold text-uppercase text-white">salomon Gym</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4 bg-secondary">
+                    <a href="{% url 'mostrar' %}" class="nav-item nav-link active">inicio</a>
+                    <a href="{% url 'nosotros' %}" class="nav-item nav-link">Sobre Nosotros</a>
+                    <a href="{% url 'crearprofesor' %}" class="nav-item nav-link">Nuevo profesor</a>
+                    <a href="{% url 'crearalumno' %}" class="nav-item nav-link">Nuevo Alumno</a>
+                    
+                    <a href="{% url 'crearclase' %}" class="nav-item nav-link">Nueva Clase</a>
+                    <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mostrar</a>
+                    <div class="dropdown-menu text-capitalize">
+                        <a href="{% url 'mostrarprofe' %}" class="dropdown-item">Profesores</a>
+                        <a href="{% url 'mostraralumno' %}" class="dropdown-item">Alumnos</a>
+                        <a href="{% url 'mostrarclase' %}" class="dropdown-item">Clases</a>
+                        
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Buscar</a>
+                    <div class="dropdown-menu text-capitalize">
+                        <a href="{% url 'buscar_profesor' %}" class="dropdown-item">Profesores</a>
+                        <a href="{% url 'buscar_alumno' %}" class="dropdown-item">Alumnos</a>
+                        <a href="{% url 'buscar_clase' %}" class="dropdown-item">Clases</a>
+                    </div>
+                </div>
+                
+                        {% if request.user.is.authenticated %}
+                        <a href="{% url 'cerrarsesion' %}" class="nav-item nav-link ">Salir</a>
+                        {% else %}
+                        <a href="{% url 'iniciarsesion' %}" class="nav-item nav-link">Iniciar sesion</a>
+                        {% endif %}
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+{% block aboutus %}
+
+{% endblock aboutus %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src={%static "img/carousel-1.jpg" %} alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">Vida fitness</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">El mejor gimnasio en Mendoza</h2>
+                        <a href="{% url 'registrar' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Inscribete ahora</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src={%static "img/carousel-2.jpg" %} alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0">Mantenimineto</h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Tu cuerpo en forma</h2>
+                        <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Inscribete ahora</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    
+    <!-- About Start -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-4 mb-lg-0" src={%static "img/about.jpg" %} alt="Image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-4 font-weight-bold mb-4">10 años de experiencia</h2>
+                <p>personal capacitado para todo tipo de ejercicio</p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <i class="flaticon-barbell display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">La mejor asistencia</h4>
+                        <p>Contamos con profesionales en educacion física </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="flaticon-medal display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Asistencia medica</h4>
+                        <p>Contamos con personal medico por cualquier emergencia</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Nos Encontramos En</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123, calle vergara, Mendoza, Argentina</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+54 02611234556</p>
+                <p><i class="fa fa-envelope mr-2"></i>Salomongym@gmail.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="{% url 'mostrar' %}"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white mb-2" href="{% url 'nosotros' %}"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
+                    <a class="text-white mb-2" href="{% url 'registrar' %}"><i class="fa fa-angle-right mr-2"></i>Registrarte</a>
+                    <a class="text-white mb-2" href="{% url 'iniciarsesion' %}"><i class="fa fa-angle-right mr-2"></i>Iniciar Sesion</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Clases</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>PowerLifting</a>
+                    <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>Karate</a>
+                    <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>Gimnasio</a>
+                    <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>Calistenia</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-primary mb-4">Horario de Apertura</h4>
+                <h5 class="text-white">Luenes - viernes</h5>
+                <p>08:00 AM - 10:00 PM</p>
+                <h5 class="text-white">Sabado - Domingo</h5>
+                <p>08:00 PM - 13:00 PM</p>
+            </div>
+        </div>
+        <div class="container border-top border-dark pt-5">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">Salomon Gym</a>. Todos los derechos reservados. Diseñado por 
+                <a class="text-white font-weight-bold" href="https://plataforma.coderhouse.com/cursos">CoderHouse</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src={%static "lib/easing/easing.min.js" %}></script>
+    <script src="{%static "lib/waypoints/waypoints.min.js" %}></script>
+
+    
+
+    <!-- Template Javascript -->
+    <script src={%static "js/main.js" %}></script>
+</body>
+
+</html>
