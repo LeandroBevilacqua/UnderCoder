@@ -25,7 +25,8 @@ Una vez compiado el link que nos deja la terminal, tendremos que iniciar sesion 
 
 https://drive.google.com/drive/folders/11VhjQ9hegsCRBK4BMDtzR8_i_E4RZ8jm?usp=sharing
 
-##Para despedirme de Daniel Ochoa
+##Para despedirme de Daniel Ochoa:
+
 Dani mail gracias por haberme acompañado todo este tiempo en el curso de Python, la verdad que no pude interactuar mucho con vos, porque en las clases soy mas callado prefiero prestar atencion. Queria agradecerte por haber estado tan atento a mis consultas, lamento haberte molestado con lo ultimo del proyecto pero mi tutor no respondia y segue sin hacerlo jaja. Asique nada fue un total reto para mi hacerlo solo, pero estuvo bueno. Asique nada espero volver a encontrarte por alguna clase. Saludos :).
 
 
