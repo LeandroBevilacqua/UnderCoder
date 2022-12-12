@@ -53,16 +53,19 @@
                 </div>
                 
                         {% if request.user.is_authenticated %}
-                        <img src="{{url}}" alt="" style="border-radius: 50px;"width=50px, height="50px">
+                        
+                        <img src="{{url}}" alt="" style="border-radius:50px;"width="50px">
+
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
                             <div class="dropdown-menu text-capitalize">
                                 <a href="{% url 'editaruser' %}" class="dropdown-item">Editar Perfil</a>
                                 <a href="{% url 'cerrarsesion' %}" class="dropdown-item">Cerrar Sesion</a>
+                            </div>
                         {% else %}
                         <a href="{% url 'iniciarsesion' %}" class="dropdown-item">Iniciar Sesion</a>
                         {% endif %}
-                            </div>
+                            
                         </div>
                         
                 </div>

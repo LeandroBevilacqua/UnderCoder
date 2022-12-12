@@ -15,14 +15,13 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def mostrar_html(request):
+        
         imagenes= Avatar.objects.filter(user=request.user.id)
         if imagenes.exists():
                 url= imagenes[0].imagen.url
         else:
                 url= None
-
-        return render(request, "index.html", {'url':url})
-
+        return render(request, 'index.html',{'url':url})
 
 def Aboutus(request):
     return render(request, "about.html")
