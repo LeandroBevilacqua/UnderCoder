@@ -1,0 +1,85 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>Gimnasio Salomon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+ 
+    <!-- Flaticon Font -->
+    <link href="{%static "lib/flaticon/font/flaticon.css" %} rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static "css/style.min.css" %}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+
+<div class="container-fluid page-header mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Ver Profesores</h4>
+        <div class="d-inline-flex">
+            <p class="m-0 text-white"><a class="text-white" href="{% url 'mostrar' %}">Inicio</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Ver Profesores</p>
+            
+        </div>
+    </div>
+</div>
+{% for profesor in profesores %}
+
+<p>
+    id:{{profesor.id}}
+    {{profesor}}
+</p>
+<button>
+        <a href="{% url 'Eliminar Profesor' profesor_id=profesor.id %}">Eliminar</a>
+</button>
+<button>
+    <a href="{% url 'Actualizar Profesor' profesor_id=profesor.id %}">Modificar</a>
+</button>
+
+{% endfor %}
+<div class="footer container-fluid mt-5 py-5 px-sm-3 px-md-5 text-white">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-primary mb-4">Nos Encontramos En</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>123, calle vergara, Mendoza, Argentina</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+54 02611234556</p>
+            <p><i class="fa fa-envelope mr-2"></i>Salomongym@gmail.com</p>
+            <div class="d-flex justify-content-start mt-4">
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-primary mb-4">Links</h4>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" href="{% url 'mostrar' %}"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                <a class="text-white mb-2" href="{% url 'nosotros' %}"><i class="fa fa-angle-right mr-2"></i>Sobre nosotros</a>
+                <a class="text-white mb-2" href="{% url 'registrar' %}"><i class="fa fa-angle-right mr-2"></i>Registrarte</a>
+                <a class="text-white mb-2" href="{% url 'iniciarsesion' %}"><i class="fa fa-angle-right mr-2"></i>Iniciar Sesion</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-primary mb-4">Clases</h4>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>PowerLifting</a>
+                <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>Karate</a>
+                <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>Gimnasio</a>
+                <a class="text-white mb-2" ><i class="fa fa-angle-right mr-2"></i>Calistenia</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-primary mb-4">Horario de Apertura</h4>
+            <h5 class="text-white">Luenes - viernes</h5>
+            <p>08:00 AM - 10:00 PM</p>
+            <h5 class="text-white">Sabado - Domingo</h5>
+            <p>08:00 PM - 13:00 PM</p>
+        </div>
+    </div>
+    <div class="container border-top border-dark pt-5">
+        <p class="m-0 text-center text-white">
+            &copy; <a class="text-white font-weight-bold" href="#">Salomon Gym</a>. Todos los derechos reservados. Diseñado por 
+            <a class="text-white font-weight-bold" href="https://plataforma.coderhouse.com/cursos">CoderHouse</a>
+        </p>
+    </div>
+</div>

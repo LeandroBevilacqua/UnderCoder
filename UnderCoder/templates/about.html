@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gimnasio Salomon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+ 
+    <!-- Flaticon Font -->
+    <link href="{%static "lib/flaticon/font/flaticon.css" %} rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static "css/style.min.css" %}" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+
+<div class="container-fluid page-header mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Sobre MI</h4>
+        <div class="d-inline-flex">
+            <p class="m-0 text-white"><a class="text-white" href="{% url 'mostrar' %}">Inicio</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Sobre mi</p>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- About Start -->
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img class="img-fluid mb-4 mb-lg-0" src="{% static 'img/feature-3.jpg' %}" alt="Image">
+        </div>
+        <div class="col-lg-6">
+            <h2 class="display-4 font-weight-bold mb-4">SOBRE MI</h2>
+            <p>Mi nombre es Leadro Bevilacqua, actualemnete me encuentro haciendo mi 5to año en estudios secundarios en Martin Zapata, en Mendoza. no siempre me gustó la programacion, a decir verdad nunca pense que me llegaría a gustar, pero aca estoy terminando este curso que me abrio la mente hacia otros lenguajes de programacion y me ayudo a querer seguir aprendiendo mas y mas sobre este espacio.</p>
+            <div class="row py-2">
+                <div class="col-sm-6">
+                    <i class="flaticon-barbell display-2 text-primary"></i>
+                    <h4 class="font-weight-bold">SOBRE EL GIMNASIO</h4>
+                    <p>Este gimnasio es a donde yo asisto, decidi realizar el proyecto con esto para ver si puedo ofrecerles mis servicios una vez lo tenga mejor diseñado y no solo sea con python</p>
+                </div>
+                <div class="col-sm-6">
+                    <i class="flaticon-medal display-2 text-primary"></i>
+                    <h4 class="font-weight-bold">MAS SOBRE MI</h4>
+                    <p>Actualemnete me encuentro realizando un curso de c# y uno de PhotoShop, mi idea a futuro es poder realizar un videoJuego, y poder vivir de todo esto(desarrolador de videoJuegos, desarrollador web, etc). </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
