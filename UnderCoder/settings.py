@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +33,12 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL='mostrar'
 LOGIN_URL= "iniciarsesion"
 LOGOUT_REDIRECT_URL='iniciarsesion'
+
+
+MEDIA_URL= '/media/'
+MEDIA_DIR= os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT= MEDIA_DIR
+
 
 # Application definition
 
