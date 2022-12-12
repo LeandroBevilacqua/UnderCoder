@@ -18,9 +18,18 @@ py manage.py runserver
 ```
 Una vez compiado el link que nos deja la terminal, tendremos que iniciar sesion dentro del blog para empezar a probar la web.
 
+## Funcionamiento:
+
+El funcionamiento de la pagina es sencillo, apareceremos en la pestaña de iniciar sesion, en la cual tendremos que registrarnos en la parte superior donde dice "registrar", luego nos redirige nuevamente a iniciar sesion en donde pondremos los datos anteriormente registrados. Luego nos enviara al Home, en donde tendremos un NAV en la parte superior con todas las funciones de la pagina. La primera que tenemos, "sobre nosotros" en este campo nos encontraremos con toda la informacion mia y del proyecto.Luego todos lss llamados "crear" son solamente rellenar los campos que nos aparecen y se guardaran en la base de datos. Los campos de "mostrar" nos mostraran los datos anteriormente creados(Profesor, Alumno, Clase) y nos permitiran actualizarlos o eliminarlos. Despues los campos de "buscar" en donde tendremos que ingresar el dato pedido por la pagina, si el dato ingresado existe nos lo devolvera, si no es asi nos pedira que lo registremos. Por ultimo el campo de "cuenta" este campo nos permite actualizar nuestra cuenta o cerrar sesion.
+
 ## El user para ejecutar el admin es:
     usuario: leandrobevi1
     contraeña: leanplay992
+    
+## Para cambiar la imagen del user:
+
+Tenemos que ingresar al admin con el usuario que tiene permisos, y en la parte de Avatar entramos y elegimos el user al que le queremos agregar la imagen, debajo de eso nos encontramos con lo que nos a llevar a nuestro explorador de archivos y tendremos que elegir una imagen. Le damos a SAVE y volvemos a la web. Iniciamos sesion con el user al que le pusimos el Avatar y listo.
+
 ## Por ultimo adjunto link de drive para el video
 
 https://drive.google.com/drive/folders/11VhjQ9hegsCRBK4BMDtzR8_i_E4RZ8jm?usp=sharing
