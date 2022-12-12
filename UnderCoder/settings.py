@@ -28,6 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+LOGIN_REDIRECT_URL='mostrar'
+LOGIN_URL= "iniciarsesion"
+LOGOUT_REDIRECT_URL='iniciarsesion'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'UnderCoder.urls'
+ROOT_URLCONF = 'Appundercoder.urls'
 
 TEMPLATES = [
     {
@@ -123,6 +127,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL='mostrar'
-LOGIN_URL= "iniciarsesion"
-LOGOUT_REDIRECT_URL='iniciarsesion'
+

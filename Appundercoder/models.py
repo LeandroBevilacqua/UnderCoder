@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Profesor(models.Model):
@@ -28,6 +29,12 @@ class ClaseGym(models.Model):
     fecha= models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return f' class_name: {self.class_name}'
+
+
+class Avatar(models.Model):
+    user= models.ForeignKey(User, on_delete=models.CASCADE)
+
+    imagen= models.ImageField(upload_to='images', null=True, blank=True)
 
 
 

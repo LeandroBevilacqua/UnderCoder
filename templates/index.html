@@ -52,11 +52,19 @@
                     </div>
                 </div>
                 
-                        {% if request.user.is.authenticated %}
-                        <a href="{% url 'cerrarsesion' %}" class="nav-item nav-link ">Salir</a>
+                        {% if request.user.is_authenticated %}
+                        <img src="{{url}}" alt="" style="border-radius: 50px;"width=50px, height="50px">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cuenta</a>
+                            <div class="dropdown-menu text-capitalize">
+                                <a href="{% url 'editaruser' %}" class="dropdown-item">Editar Perfil</a>
+                                <a href="{% url 'cerrarsesion' %}" class="dropdown-item">Cerrar Sesion</a>
                         {% else %}
-                        <a href="{% url 'iniciarsesion' %}" class="nav-item nav-link">Iniciar sesion</a>
+                        <a href="{% url 'iniciarsesion' %}" class="dropdown-item">Iniciar Sesion</a>
                         {% endif %}
+                            </div>
+                        </div>
+                        
                 </div>
             </div>
         </nav>
@@ -75,7 +83,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <h3 class="text-primary text-capitalize m-0">Vida fitness</h3>
                         <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">El mejor gimnasio en Mendoza</h2>
-                        <a href="{% url 'registrar' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Inscribete ahora</a>
+                        <a href="{% url 'nosotros' %}" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">{{user.username}} haz click para saber sobre nosotros!</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -83,7 +91,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <h3 class="text-primary text-capitalize m-0">Mantenimineto</h3>
                         <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Tu cuerpo en forma</h2>
-                        <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Inscribete ahora</a>
+                        <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">{{user.username}} haz click para saber sobre nosotros!</a>
                     </div>
                 </div>
             </div>

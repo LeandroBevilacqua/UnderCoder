@@ -7,3 +7,4 @@ from .models import *
 admin.site.register(Profesor)
 admin.site.register(Alumno)
 admin.site.register(ClaseGym) # register)
+admin.site.register(Avatar)
